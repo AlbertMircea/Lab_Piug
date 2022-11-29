@@ -1,0 +1,191 @@
+:root {
+  --transition: all 0.7s ease;
+  --yellow: #f9d342;
+  --dark: #292826;
+}
+
+* {
+  font-family: "Arima Madurai", cursive;
+}
+
+.sablon {
+  background-color: black;
+}
+.h-font {
+  font-family: "Arima Madurai", cursive;
+}
+
+.site-logo img {
+  max-height: 45px;
+  padding-left: 30px;
+  max-width: 170px;
+}
+
+.site-logo h2 {
+  padding-left: 30px;
+  font-size: 20px;
+}
+.total {
+  background-color: #222;
+}
+.box {
+  background-color: #333;
+}
+.box .little {
+  background-color: #f9d342;
+  font-weight: bold;
+  color: #292826;
+}
+
+.admin {
+  margin: 0px 0px 0px 15px;
+  color: #f9d342;
+}
+
+.lista a {
+  font-size: 20px;
+  transition: var(--transition);
+  color: #fff;
+}
+
+.lista a:hover {
+  /* background-color: #f9d342; */
+  padding-left: 12px;
+  /* color: #292826; */
+  color: #fff;
+}
+
+.meniu .custom-bg {
+  background-color: #f9d342;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 30px 0px 15px 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.meniu .custom-bg:hover {
+  transform: scale(1.1);
+}
+
+.login-form .custom-bg {
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid #fff;
+  background: transparent;
+  transition: var(--transition);
+  color: #fff;
+}
+
+.custom-bg:hover {
+  background: #f9d342;
+  color: #292826;
+}
+
+.h-line {
+  width: 150px;
+  margin: 0 auto;
+  height: 1.7px;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+}
+
+#dashboard-menu {
+  position: fixed;
+  height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  #dashboard-menu {
+    height: auto;
+    width: 100%;
+  }
+
+  #main-content {
+    margin-top: 60px;
+  }
+}
+
+.pagina {
+  background-color: #292826;
+  color: #fff;
+}
+
+.tabel-users {
+  background-color: #292826;
+}
+
+.continut {
+  color: #fff;
+}
+
+.continut th {
+  background-color: #f9d342;
+  color: #292826;
+}
+
+.buton-edit {
+  background-color: #fffaa0;
+  color: #292826;
+  margin-bottom: 15px;
+}
+
+.buton-edit:hover {
+  background-color: #fffaa0;
+  color: #292826;
+}
+
+.submit-edit .custom-bg {
+  background-color: #f9d342;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 15px 0px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-edit .custom-bg:hover {
+  transform: scale(1.1);
+}
+
+.row .totalusers {
+  background-color: #f9d342;
+  color: #292826;
+  border-radius: 5px;
+  font-size: 20px;
+  font-style: bold;
+  transition: var(--transition);
+}
+
+.row .totalbookings {
+  background-color: #fffaa0;
+  color: #292826;
+  border-radius: 5px;
+  font-size: 20px;
+  font-style: bold;
+  transition: var(--transition);
+}
+
+.row .totalusers:hover {
+  transform: scale(1.1);
+}
+
+.row .totalbookings:hover {
+  transform: scale(1.1);
+}

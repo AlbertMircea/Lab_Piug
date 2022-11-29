@@ -1,0 +1,692 @@
+:root {
+  --transition: all 0.7s ease;
+  --yellow: #f9d342;
+  --dark: #292826;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Arima Madurai", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* Butoanele de Log in si Sign Up */
+
+.btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 15px auto;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Tranzitie pentru butoanele de Log in si Sign Up */
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* @media este pentru responsive*/
+@media (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* HEADER */
+
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    url("../images/digital-photo.jpg") top center/cover no-repeat;
+  min-height: 100vh;
+  /* color: #fff; */
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  color: #fff;
+}
+
+.head-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Toata partea de text de la prima poza de la HOME */
+
+.head-bottom {
+  flex: 1;
+  text-align: left;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.head-bottom h1 {
+  padding: 300px 0 0 0;
+  font-size: 40px;
+  color: #f9d342;
+}
+
+.head-bottom h2 {
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* Partea de logo + MENU
+    Trebuie sa rezolv sa nu imi mai apara cursorul pe logo!!! */
+
+.head-top span {
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+.head-top span:hover {
+  color: var(--yellow);
+}
+
+/* Logo-ul */
+.site-logo img {
+  height: 45px;
+  padding-left: 30px;
+}
+
+/* MENU */
+
+.site-nav {
+  font-size: 25px;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* MENU - cand se deschide */
+
+/* Cand se deschide meniul */
+
+.sidenav {
+  background: var(--dark);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 250px;
+  padding: 20px;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+/********/
+.sidenav.show {
+  right: 0;
+}
+/*************/
+
+/* X-ul pe care apas ca sa inchid meniul */
+
+.cancel-btn {
+  position: absolute;
+  right: 25px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cancel-btn:hover {
+  color: #f9d342;
+}
+
+/* Restul optiunilor din meniu */
+
+.navbar {
+  margin-top: 50px;
+  list-style: none;
+  padding: 12px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 15px 0;
+  display: block;
+  border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
+  opacity: 0.8;
+  letter-spacing: 1.5px;
+  transition: var(--transition);
+}
+.navbar li a:hover {
+  padding-left: 12px;
+}
+.sign-up,
+.log-in,
+.log-out {
+  background: var(--yellow);
+  color: #fff;
+}
+
+/* Pentru responsive */
+@media (max-width: 400px) {
+  .sidenav {
+    width: 100vw;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+
+/** TITLE - titlurile de la subcategoriile de la HOMES*/
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: var(--yellow);
+  margin: 15px 0;
+}
+
+.sec-width {
+  width: 85vw;
+  margin: 0 auto !important;
+}
+
+/* ----------------------------------------------------------------------- */
+.buy {
+  padding: 40px 40px;
+  background: #333;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  font-size: 15px;
+}
+
+.join {
+  flex: 1;
+  text-align: center;
+  margin: 0px 20px;
+}
+
+.join h1 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+}
+
+.container {
+  flex: 1;
+  margin: 0px 20px 0px 150px;
+
+  /* margin: 2rem;
+  padding: 2rem;
+  width: 600px;
+  height: 400px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  background: white;
+  border-radius: 0.5rem; */
+}
+
+.text-buy {
+  font-size: 20px;
+  color: white;
+}
+
+.select-box {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #333;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+.selected {
+  background: #333;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("images/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #f9d342;
+  color: black;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.child1 {
+  padding: 40px 40px;
+  background: #222;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  font-size: 15px;
+}
+
+.child1 p {
+  padding: 10px 0px;
+  color: #fff;
+}
+
+.castigi {
+  flex: 1;
+  padding: 0px 30px 0px 0px;
+}
+
+.castigi h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f9d342;
+}
+
+.castigi i {
+  list-style: none;
+  font-size: 30px;
+  padding: 5px 5px;
+  color: #f9d342;
+}
+
+.pierzi {
+  flex: 1;
+  padding: 0px 0px 0px 30px;
+}
+
+.pierzi h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f9d342;
+}
+
+.pierzi i {
+  list-style: none;
+  font-size: 30px;
+  padding: 5px 5px;
+  color: #f9d342;
+}
+/* ----------------------------------------------------------------------- */
+
+.core {
+  padding: 40px 40px;
+  background: #333;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  font-size: 15px;
+}
+
+.row .for-you-title h3 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f9d342;
+}
+
+.core .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.core .row .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1 1 70rem;
+}
+
+.core .row .box-container .box {
+  margin: 2rem;
+  padding: 2rem;
+  width: 280px;
+  height: 280px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  background: #222;
+  border-radius: 0.5rem;
+}
+
+.core .row .box-container .box:hover {
+  background: black;
+}
+
+.core .row .box-container .box h3 {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+}
+
+.core .row .box-container .box i {
+  color: #f9d342;
+  padding: 0px 90px 10px 90px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.core .row .box-container .box p {
+  font-size: 15px;
+  color: #eee;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------------------- */
+
+.product {
+  background: #333;
+  height: 100%;
+  font-size: 15px;
+  padding: 40px 40px;
+}
+
+.product .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product .box-container .box1 {
+  flex: 1;
+  padding: 0px 0px 0px 110px;
+}
+
+.product .box-container .box2 {
+  flex: 1;
+}
+
+.product .course-title h1 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #f9d342;
+  margin: 15px 0px;
+}
+
+.product .box-container .box {
+  margin: 1.5rem;
+  margin-bottom: 30px;
+  padding: 1rem;
+  width: 500px;
+  height: 250px;
+  background: #222;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.7s ease;
+}
+
+.product .box-container .box:hover {
+  transform: scale(1.1);
+}
+
+.product .box-container .box .capitol {
+  padding: 1rem;
+  width: 20rem;
+  border-right: 0.1rem solid #ccc;
+  color: #f9d342;
+  font-size: 15px;
+  text-align: left;
+}
+
+.product .box-container .box .content {
+  padding: 1rem;
+}
+
+.product .box-container .box .content p {
+  font-size: 15px;
+  color: #eee;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* FOOTER */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  /* margin: 100px 0 0 0; */
+}
+.footer-container {
+  width: 85vw;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.footer-container p,
+.footer-container a,
+.footer-container span {
+  opacity: 0.8;
+}
+.footer a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.social-icons {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  padding: 15px 0;
+}
+.social-icons li {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  background: #2e2e2e;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+  padding: 10px 0px;
+  text-align: center;
+}
+.social-icons li:hover {
+  background: #fff;
+  color: #2e2e2e;
+}
+.contact-item span {
+  display: block;
+}
+@media (min-width: 900px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (min-width: 1170px) {
+  .footer {
+    text-align: left;
+  }
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-container div:nth-child(1) p {
+    padding-right: 20px;
+  }
+  .contact-item {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+}
+
+.showModal {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* --------------------------------------------------------- */
+
+.reservation form {
+  /* border: #f9d342; */
+  padding: 2rem 150px;
+  /* margin: 0px 150px; */
+  background-color: #222;
+}
+
+.reservation form .flexare {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.reservation form h3 {
+  /* background-color: var(--sub-color); */
+  color: #f9d342;
+  font-size: 40px;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.reservation form .flexare .cutie {
+  flex: 0;
+}
+
+.reservation form .flexare .cutie p {
+  font-size: 20px;
+  color: #f9d342;
+}
+
+.reservation form .flexare .cutie .intrare {
+  padding: 1rem 0;
+  margin: 1rem 0;
+  /* border-bottom: red; */
+  background: #222;
+  color: white;
+  font-size: 20px;
+  width: 350px;
+  cursor: pointer;
+  transition: all 0.4s;
+  border: 1rem 1rem 1rem 1rem white;
+}
+
+.reservation option::after {
+  background: #f9d342;
+  color: #0d141f;
+}
+
+.head-btn {
+  margin: 20px 0;
+  margin-left: 44%;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid white;
+  background: transparent;
+  padding: 13px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+  align-items: center;
+}
+.head-btn:hover {
+  background: #f9d342;
+  color: #fff;
+}
+
+.reservation
+  form
+  .flexare
+  .cutie
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}

@@ -1,0 +1,271 @@
+:root {
+  --transition: all 0.7s ease;
+  --yellow: #f9d342;
+  --dark: #292826;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Arima Madurai", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* Butoanele de Log in si Sign Up */
+
+.btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 140px;
+  display: block;
+  margin: 15px auto;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Tranzitie pentru butoanele de Log in si Sign Up */
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* @media este pentru responsive*/
+@media (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* HEADER */
+
+.header {
+  background-color: black;
+  /* min-height: 100vh; */
+  color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.head-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+}
+/* ----------------------------------------------------------------------- */
+
+/* Partea de logo + MENU
+  Trebuie sa rezolv sa nu imi mai apara cursorul pe logo!!! */
+
+.head-top span {
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: var(--transition);
+}
+.head-top span:hover {
+  color: var(--yellow);
+}
+
+/* Logo-ul */
+.site-logo img {
+  height: 45px;
+  padding-left: 30px;
+}
+
+/* MENU */
+
+.site-nav {
+  font-size: 25px;
+}
+
+/* MENU - cand se deschide */
+
+/* Cand se deschide meniul */
+
+.sidenav {
+  background: var(--dark);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 250px;
+  padding: 20px;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+/********/
+.sidenav.show {
+  right: 0;
+}
+/*************/
+
+/* X-ul pe care apas ca sa inchid meniul */
+
+.cancel-btn {
+  position: absolute;
+  right: 25px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cancel-btn:hover {
+  color: #f9d342;
+}
+
+/* Restul optiunilor din meniu */
+
+.navbar {
+  margin-top: 50px;
+  list-style: none;
+  padding: 12px;
+}
+
+.navbar li a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 15px 0;
+  display: block;
+  border-bottom: 0.5px solid rgba(249, 211, 66, 0.3);
+  opacity: 0.8;
+  letter-spacing: 1.5px;
+  transition: var(--transition);
+}
+.navbar li a:hover {
+  padding-left: 12px;
+}
+.sign-up,
+.log-in,
+.log-out {
+  background: var(--yellow);
+  color: #fff;
+}
+
+/* Pentru responsive */
+@media (max-width: 400px) {
+  .sidenav {
+    width: 100vw;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+
+/** TITLE - titlurile de la subcategoriile de la HOMES*/
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 30px;
+  color: var(--yellow);
+  margin: 15px 0;
+}
+
+.sec-width {
+  width: 85vw;
+  margin: 0 auto !important;
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* FOOTER */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  margin: 100px 0 0 0;
+}
+.footer-container {
+  width: 85vw;
+  margin: auto;
+  padding: 30px 0;
+}
+.footer-container p,
+.footer-container a,
+.footer-container span {
+  opacity: 0.8;
+}
+.footer a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+.social-icons {
+  list-style: none;
+  display: flex;
+  /* justify-content: center; */
+  padding: 15px 0;
+}
+.social-icons li {
+  margin: 0 10px;
+  width: 50px;
+  height: 50px;
+  background: #2e2e2e;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px 0px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.social-icons li:hover {
+  background: #fff;
+  color: #2e2e2e;
+}
+.contact-item span {
+  display: block;
+}
+@media (min-width: 900px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (min-width: 1170px) {
+  .footer {
+    text-align: left;
+  }
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer-container div:nth-child(1) p {
+    padding-right: 20px;
+  }
+  .contact-item {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+}
+
+.showModal {
+  position: fixed;
+  background: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* --------------------------------------------------------- */
